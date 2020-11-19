@@ -1,19 +1,40 @@
-import { resolve } from 'path'
 import defu from 'defu'
 import { Module } from '@nuxt/types'
+import ngrok from 'ngrok'
+import chalk from 'chalk'
 
-export interface ModuleOptions {}
+export interface ModuleOptions {
+  token?: string
+}
 const DEFAULTS: ModuleOptions = {}
-const CONFIG_KEY = 'myModule'
+const CONFIG_KEY = 'ngrok'
 
-const nuxtModule: Module<ModuleOptions> = /* async */ function (moduleOptions) {
+const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
+  const { nuxt } = this
+  // Don't start NGROK in production mode
+  if (nuxt.options.dev === false) {
+    return
+  }
+
   const options = defu<ModuleOptions>(this.options[CONFIG_KEY], moduleOptions, DEFAULTS)
-  // const { nuxt } = this
 
-  this.addPlugin({
-    src: resolve(__dirname, '../templates/plugin.js'),
-    fileName: 'myPlugin.js',
-    options
+  // Start NGROK when Nuxt server is listening
+  let url: string
+  nuxt.hook('listen', async function (_server: any, { port }: { port: number }) {
+    const token = process.env.NGROK_TOKEN || options.token
+    await ngrok.authtoken(token || '')
+
+    url = await ngrok.connect(port)
+
+    nuxt.options.publicRuntimeConfig.url = url
+    nuxt.options.cli.badgeMessages.push(
+      `Public URL: ${chalk.underline.yellow(url)}`
+    )
+  })
+
+  // Disconnect ngrok connection when closing nuxt
+  nuxt.hook('close', function () {
+    url && ngrok.disconnect(url)
   })
 }
 

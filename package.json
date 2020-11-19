@@ -1,5 +1,5 @@
 {
-  "name": "npm_package",
+  "name": "@nuxtjs/ngrok",
   "version": "0.0.0",
   "description": "",
   "keywords": [
@@ -7,13 +7,12 @@
     "module",
     "nuxt-module"
   ],
-  "repository": "github_repo",
+  "repository": "nuxt-community/ngrok-module",
   "license": "MIT",
   "main": "dist/module.js",
   "types": "dist/module.d.ts",
   "files": [
-    "dist",
-    "templates"
+    "dist"
   ],
   "scripts": {
     "build": "siroc build",
@@ -23,7 +22,8 @@
     "test": "yarn lint && jest"
   },
   "dependencies": {
-    "defu": "^2.0.4"
+    "defu": "^2.0.4",
+    "ngrok": "^3.3.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "latest",
