@@ -1,6 +1,6 @@
 <template>
   <div>
-    Works!
+    Works! wow amazing
   </div>
 </template>
 

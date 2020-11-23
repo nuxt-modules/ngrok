@@ -15,7 +15,7 @@ describe('module', () => {
     config: {
       dev: true,
       ngrok: {
-        token: '1234'
+        authtoken: '1234'
       }
     }
   })
