@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/ngrok",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "description": "ngrok exposes your localhost to the world for easy testing and sharing! No need to mess with DNS or deploy just to have others test out your changes",
   "keywords": [
     "nuxt",
@@ -23,6 +23,7 @@
     "test": "yarn lint && jest"
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "defu": "^2.0.4",
     "ngrok": "^3.3.0"
   },

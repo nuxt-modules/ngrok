@@ -25,10 +25,10 @@ Add `@nuxtjs/ngrok` dependency using yarn or npm to your project
   </code-block>
 </code-group>
 
-Add `@nuxtjs/ngrok` to the modules section of your `nuxt.config.js`
+Add `@nuxtjs/ngrok` to the buildModules section of your `nuxt.config.js`
 
 ```js{}[nuxt.config.js]
- modules: [
+ buildModules: [
     '@nuxtjs/ngrok',
   ]
 ```
@@ -45,8 +45,9 @@ NGROK_TOKEN=my-authtoken-from-ngrok
 
 ```js{}[nuxt.config.js]
  ngrok: {
-   authtoken: 'my-ngrok-authtoken'
- }
+    // module options
+    token: 'my-ngrok-authtoken'
+  }
 ```
 
 <base-alert type="warning">
