@@ -21,7 +21,7 @@ describe('module', () => {
   })
 
   test('checks if url exists', () => {
-    const { url } = getNuxt().options.publicRuntimeConfig
+    const { url } = getNuxt().options.publicRuntimeConfig.ngrok
 
     expect(ngrok.connect).toHaveBeenCalled()
     expect(ngrok.authtoken).toHaveBeenCalledWith('1234')
