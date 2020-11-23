@@ -2,5 +2,9 @@
   "title": "@nuxtjs/ngrok",
   "url": "https://github.com/nuxt-community/ngrok-module",
   "github": "nuxt-community/ngrok-module",
-  "layout": "single"
+  "twitter": "nuxt_js",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  }
 }
