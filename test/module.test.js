@@ -21,15 +21,16 @@ describe('module', () => {
   })
 
   test('checks if url exists', () => {
-    expect(ngrok.connect).toHaveBeenCalled()
     const { url } = getNuxt().options.publicRuntimeConfig
 
+    expect(ngrok.connect).toHaveBeenCalled()
+    expect(ngrok.authtoken).toHaveBeenCalledWith('1234')
     expect(url).toBeDefined()
   })
 
   test('checks if url displays in cli', () => {
     const nuxt = getNuxt()
-    const { url } = nuxt.options.publicRuntimeConfig
+    const { url } = nuxt.options.publicRuntimeConfig.ngrok
     const { badgeMessages } = nuxt.options.cli
 
     expect(badgeMessages).toContainEqual(expect.stringContaining(url))

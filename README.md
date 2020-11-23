@@ -16,11 +16,11 @@
 yarn add @nuxtjs/ngrok # or npm install @nuxtjs/ngrok
 ```
 
-2. Add `@nuxtjs/ngrok` to the `modules` section of `nuxt.config.js`
+2. Add `@nuxtjs/ngrok` to the `buildModules` section of `nuxt.config.js` (or `modules` if on Nuxt < 2.9>)
 
 ```js
 {
-  modules: [
+  buildModules: [
     '@nuxtjs/ngrok',
   ],
   ngrok: {
