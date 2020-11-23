@@ -1,10 +1,19 @@
 import { getNuxt, setupTest } from '@nuxt/test-utils'
+import ngrok from 'ngrok'
+
+jest.mock('ngrok', () => ({
+  connect: jest.fn().mockImplementation(() => Promise.resolve('https://example.com')),
+  authtoken: jest.fn().mockImplementation(() => Promise.resolve()),
+  disconnect: jest.fn()
+}))
 
 describe('module', () => {
   setupTest({
     testDir: __dirname,
     fixture: '../example',
+    server: true,
     config: {
+      dev: true,
       ngrok: {
         token: '1234'
       }
@@ -12,21 +21,17 @@ describe('module', () => {
   })
 
   test('checks if url exists', () => {
-    const nuxt = getNuxt()
-    const url = nuxt.options.publicRuntimeConfig.url
-    expect(url).toExist()
+    expect(ngrok.connect).toHaveBeenCalled()
+    const { url } = getNuxt().options.publicRuntimeConfig
+
+    expect(url).toBeDefined()
   })
 
   test('checks if url displays in cli', () => {
     const nuxt = getNuxt()
-    const url = nuxt.options.publicRuntimeConfig.url
-    const cli = nuxt.options.cli.badgeMessages
-    expect(cli).toContain(url)
-  })
+    const { url } = nuxt.options.publicRuntimeConfig
+    const { badgeMessages } = nuxt.options.cli
 
-  test('checks if there is a token', () => {
-    const nuxt = getNuxt()
-    const token = nuxt.options.publicRuntimeConfig.token
-    expect(token).toExist()
+    expect(badgeMessages).toContainEqual(expect.stringContaining(url))
   })
 })
