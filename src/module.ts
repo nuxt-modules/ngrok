@@ -4,7 +4,7 @@ import ngrok from 'ngrok'
 import chalk from 'chalk'
 
 export interface ModuleOptions {
-  token?: string
+  authtoken?: string
 }
 const DEFAULTS: ModuleOptions = {}
 const CONFIG_KEY = 'ngrok'
@@ -21,7 +21,7 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
   // Start NGROK when Nuxt server is listening
   let url: string
   nuxt.hook('listen', async function (_server: any, { port }: { port: number }) {
-    const token = process.env.NGROK_TOKEN || options.token
+    const token = process.env.NGROK_TOKEN || options.authtoken
     await ngrok.authtoken(token || '')
 
     url = await ngrok.connect(port)

@@ -23,7 +23,7 @@ position: 2
   </code-block>
 </code-group>
 
-When running Nuxt in dev mode you will now see a Public Url in the Nuxt CLI that you can copy and share with anyone. They will then be able to see your localhost.
+When running Nuxt in dev mode you will now see a Public Url in the Nuxt CLI that you can copy and share with anyone. They will then be able to see your localhost and watch your live changes while working in de mode.
 
 <alert type="warning">
 
