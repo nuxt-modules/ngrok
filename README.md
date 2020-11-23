@@ -25,9 +25,7 @@ yarn add @nuxtjs/ngrok # or npm install @nuxtjs/ngrok
   ],
   ngrok: {
     // module options
-    [ '@nuxtjs/ngrok',
-      { authtoken: 'my-ngrok-authtoken' }
-    ]
+    authtoken: 'my-ngrok-authtoken'
   }
 }
 ```
