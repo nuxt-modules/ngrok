@@ -1,6 +1,8 @@
 export default {
-  modules: [
-    '../src/module.ts'
-  ]
+  modules: ['../src/module.ts'],
 
+  ngrok: {
+    auth: process.env.NGROK_AUTH || 'nuxt:rocks',
+    authtoken: process.env.NGROK_AUTHTOKEN
+  }
 }
