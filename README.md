@@ -44,7 +44,7 @@ yarn add @nuxtjs/ngrok # or npm install @nuxtjs/ngrok
 
 Add authorization and more using the module options.
 
-```js{}[nuxt.config.js]
+```js
 ngrok: {
     // module options
     authtoken: 'my-ngrok-authtoken'
