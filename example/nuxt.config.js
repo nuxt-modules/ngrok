@@ -3,6 +3,8 @@ export default {
 
   ngrok: {
     auth: process.env.NGROK_AUTH || 'nuxt:rocks',
-    authtoken: process.env.NGROK_AUTHTOKEN
+    authtoken: process.env.NGROK_AUTHTOKEN,
+    addr: 8080,
+    region: 'eu'
   }
 }

@@ -26,11 +26,11 @@ export default {
 }
 ```
 
-<base-alert type="warning">
+<alert type="warning">
 
 Don't forget to make sure your `.env`file has been added to your `.gitignore`.
 
-</base-alert>
+</alert>
 
 ## Adding Authorization
 
@@ -49,11 +49,11 @@ export default {
 }
 ```
 
-<base-alert type="warning">
+<alert type="warning">
 
 Don't forget to make sure your `.env`file has been added to your `.gitignore`.
 
-</base-alert>
+</alert>
 
 ## Adding a Port
 
@@ -81,11 +81,11 @@ export default {
 }
 ```
 
-<base-alert type="info">
+<alert>
 
 Adding a subdomain requires a paid account
 
-</base-alert>
+</alert>
 
 ## Changing the Region
 

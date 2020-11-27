@@ -52,7 +52,7 @@ const nuxtModule: Module<ModuleOptions> = function(moduleOptions) {
 
   // Disconnect ngrok connection when closing nuxt
   nuxt.hook('close', () => {
-    url && ngrok.disconnect(url)
+    url && ngrok.disconnect()
   })
 }
 ;(nuxtModule as any).meta = require('../package.json')
