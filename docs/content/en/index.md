@@ -22,4 +22,8 @@ ngrok exposes your localhost to the world for easy testing and sharing! No need 
 
 <list :items="items"></list>
 
-
+<video poster="https://res.cloudinary.com/nuxt/video/upload/v1588091670/ngrok-module_ihfpnh.jpg" loop="loop" plays-inline="true" controls="controls">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/ngrok-module_ihfpnh.webm" type="video/webm">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1592314331/ngrok-module_ihfpnh.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/ngrok-module_ihfpnh.ogv" type="video/ogg">
+</video>
