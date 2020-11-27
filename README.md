@@ -1,3 +1,5 @@
+[![@nuxtjs/ngrok](https://ngrok.nuxtjs.org/preview.svg)](https://ngrok.nuxtjs.org)
+
 # @nuxtjs/ngrok
 
 [![npm version][npm-version-src]][npm-version-href]
@@ -6,9 +8,21 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-[📖 **Release Notes**](./CHANGELOG.md)
+> [ngrok](https://github.com/bubenshchykov/ngrok) integration for [NuxtJS](https://nuxtjs.org)
 
-## Setup
+- [✨ &nbsp;Release Notes](https://ngrok.nuxtjs.org/releases)
+- [📖 &nbsp;Documentation](https://ngrok.nuxtjs.org)
+
+## Features
+
+- Secure https for all tunnels
+- Show your work to anyone
+- Use the API to test web hooks
+- Test your UI in cloud browsers
+
+[📖 &nbsp;Read more](https://ngrok.nuxtjs.org)
+
+## Quick Setup
 
 1. Add `@nuxtjs/ngrok` dependency to your project
 
@@ -23,22 +37,54 @@ yarn add @nuxtjs/ngrok # or npm install @nuxtjs/ngrok
   buildModules: [
     '@nuxtjs/ngrok',
   ],
-  ngrok: {
-    // module options
-    authtoken: 'my-ngrok-authtoken'
-  }
 }
 ```
+
+## Add Options
+
+Add authorization and more using the module options.
+
+```js{}[nuxt.config.js]
+ngrok: {
+    // module options
+    authtoken: 'my-ngrok-authtoken'
+    auth: 'my-user:my-pwd',
+    region: 'eu',
+    addr: 8080,
+    proto: 'http',
+    subdomain: 'my-subdomain'
+  }
+```
+
+See [module options](https://ngrok.nuxtjs.org/options).
+
+## Usage
+
+Run the `dev`command and you will see your public URL in the Nuxt CLI which you can then share with anyone, anywhere in the world.
+
+Simple use example:
+
+```bash
+yarn dev
+or
+npm run dev
+```
+
+See [Usage](https://ngrok.nuxtjs.org/usage).
 
 ## Development
 
 1. Clone this repository
-2. Install dependencies using `yarn`
-3. Start development server using `yarn dev`
+2. Install dependencies using `yarn add` or `npm install`
+3. Start development server using `yarn dev` or `npm run dev`
 
 ## License
 
 [MIT License](./LICENSE)
+
+Copyright (c)
+
+Maintained by [Debbie O'Brien](https://github.com/debs-obrien)
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/ngrok/latest.svg
