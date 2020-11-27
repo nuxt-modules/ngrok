@@ -93,7 +93,7 @@ export default {
 
 ## Changing the Protocol
 
-You can specify a different ngrok region by using the `ngrok.proto` option. The default protocol is `http`.
+You can specify a different ngrok protocol by using the `ngrok.proto` option. The default protocol is `http`.
 
 ```js{}[nuxt.config.js]
 export default {
