@@ -40,15 +40,6 @@ If you don't want your Dev server to be exposed to the internet then you should 
 NGROK_AUTH='user:pwd'
 ```
 
-```js{}[nuxt.config.js]
-export default {
- ngrok: {
-    // module options
-    auth: process.env.NGROK_AUTH // http basic authentication for tunnel
-  }
-}
-```
-
 <alert type="warning">
 
 Don't forget to make sure your `.env`file has been added to your `.gitignore`.

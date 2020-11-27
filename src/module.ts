@@ -18,7 +18,8 @@ const nuxtModule: Module<ModuleOptions> = function(moduleOptions) {
   }
 
   const defaults: ModuleOptions = {
-    authtoken: process.env.NGROK_TOKEN
+    authtoken: process.env.NGROK_TOKEN,
+    auth: process.env.NGROK_AUTH
   }
 
   const options = defu<ModuleOptions>(
