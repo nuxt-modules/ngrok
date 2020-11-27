@@ -1,4 +1,4 @@
-[![@nuxtjs/ngrok](https://ngrok.nuxtjs.org/preview.svg)](https://ngrok.nuxtjs.org)
+[![@nuxtjs/ngrok](./docs/static/preview.svg)](https://ngrok.nuxtjs.org)
 
 # @nuxtjs/ngrok
 
@@ -81,10 +81,6 @@ See [Usage](https://ngrok.nuxtjs.org/usage).
 ## License
 
 [MIT License](./LICENSE)
-
-Copyright (c)
-
-Maintained by [Debbie O'Brien](https://github.com/debs-obrien)
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/ngrok/latest.svg
