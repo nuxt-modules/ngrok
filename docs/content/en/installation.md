@@ -33,25 +33,3 @@ Add `@nuxtjs/ngrok` to the buildModules section of your `nuxt.config.js`
   ]
 ```
 
-## Adding an authtoken
-
-You can create a basic http-https-tcp tunnel without an authtoken. For custom subdomains and more you should obtain an authtoken by signing up at [ngrok.com](ngrok.com).
-
-Once you have your token you can add it to your `.env` file with the key `NGROK_TOKEN`.
-
-```bash{}[.env]
-NGROK_TOKEN=my-authtoken-from-ngrok
-```
-
-```js{}[nuxt.config.js]
- ngrok: {
-    // module options
-    authtoken: 'my-ngrok-authtoken'
-  }
-```
-
-<base-alert type="warning">
-
-Don't forget to make sure your `.env`file has been added to your `.gitignore`.
-
-</base-alert>
