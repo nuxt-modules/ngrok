@@ -25,7 +25,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "defu": "^3.2.2",
-    "ngrok": "^3.3.0"
+    "ngrok": "^3.4.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "latest",
