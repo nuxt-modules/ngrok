@@ -3382,6 +3382,14 @@ chalk@^4.0.0, chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+chalk@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
+  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 char-regex@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-1.0.2.tgz#d744358226217f981ed58f479b1d6bcc29545dcf"
@@ -8036,10 +8044,10 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-ngrok@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-3.4.0.tgz#adaa66b70401b0b6902825aa3ea325c06f8770d1"
-  integrity sha512-fwgYlGQsLclMRVkGNhdWbeE5xx/xCoKr8zHoqRehOxGu4Ep14dAfe1u45rE0rqtUhWqTVfCl1lWV2rLUNizIDw==
+ngrok@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-3.4.1.tgz#ee20a912831e68a7ac86a6576c21fadbd8458df7"
+  integrity sha512-OTm6Nmi6JINPbzkZff8ysA2WqMeNDg3sOPMFHW2CpatVD5yJxmX1qdyLq3QYNACTKNB3/K9jTkG4wUVpAFX9Dw==
   dependencies:
     "@types/node" "^8.10.50"
     "@types/request" "^2.48.2"
