@@ -43,7 +43,12 @@ const nuxtModule: Module<ModuleOptions> = function(moduleOptions) {
       await ngrok.authtoken(options.authtoken)
     }
 
-    url = await ngrok.connect({ ...options, addr: port } as INgrokOptions)
+    let addr = port
+    if(options.addr){
+      addr = options.addr
+    }
+
+    url = await ngrok.connect({ ...options, addr } as INgrokOptions)
 
     nuxt.options.publicRuntimeConfig.ngrok = { url }
     nuxt.options.cli.badgeMessages.push(
