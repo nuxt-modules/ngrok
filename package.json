@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "defu": "^3.2.2",
+    "defu": "^5.0.1",
     "ngrok": "^3.4.0"
   },
   "devDependencies": {
