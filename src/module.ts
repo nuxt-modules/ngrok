@@ -46,6 +46,7 @@ const nuxtModule: Module<ModuleOptions> = function(moduleOptions) {
     url = await ngrok.connect({ ...options, addr: port } as INgrokOptions)
 
     nuxt.options.publicRuntimeConfig.ngrok = { url }
+    console.success(`Public URL: ${chalk.underline.yellow(url)}`)
     nuxt.options.cli.badgeMessages.push(
       `Public URL: ${chalk.underline.yellow(url)}`
     )
