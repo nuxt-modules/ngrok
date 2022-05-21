@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: [
     MyModule
   ],
-  myModule: {
+  ngrok: {
     addPlugin: true,
     token: process.env.NGROK_TOKEN
   }

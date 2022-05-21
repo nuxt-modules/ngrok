@@ -10,8 +10,8 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'my-module',
-    configKey: 'myModule'
+    name: 'ngrok-module',
+    configKey: 'ngrok'
   },
   defaults: {
     addPlugin: true,
@@ -22,6 +22,12 @@ export default defineNuxtModule<ModuleOptions>({
       const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
       nuxt.options.build.transpile.push(runtimeDir)
       addPlugin(resolve(runtimeDir, 'plugin'))
+    }
+
+    if (nuxt.options.dev === false) return;
+
+    if (!options.token) {
+      throw new Error('Ngrok token not provided')
     }
 
     let url: string;
