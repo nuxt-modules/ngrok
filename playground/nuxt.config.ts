@@ -3,10 +3,9 @@ export default defineNuxtConfig({
   modules: ['../src/module'],
 
   ngrok: {
-    // you can use authtoken from env NGROK_AUTHTOKEN
-    // authtoken_from_env: true,
-    // or set it directly
-    authtoken: '2hMFv8LJoGamqABwJprpDNywqrV_5MLxuYUxG7werCgWvQ4y5',
-    production: false,
+    // set NGROK_AUTHTOKEN in your environment variables or use the authtoken option
+    authtoken_from_env: true,
+    // authtoken: 'your_auth_token',
+    domain: 'mutual-moose-generous.ngrok-free.app', // optional, you can use a custom domain
   },
 })
