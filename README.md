@@ -1,3 +1,4 @@
+![nuxt-mongoose](https://docs.arashsheyda.me/modules/nuxt-ngrok.jpg)
 
 # Nuxt NGROK
 
@@ -6,28 +7,24 @@
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-My new Nuxt module for doing amazing things.
+Easily expose your Nuxt application to the internet with [NGROK](https://ngrok.com/).
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/arashsheyda/nuxt-ngrok?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+- [📖 &nbsp;Documentation](https://docs.arashsheyda.me/nuxt-ngrok)
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- **Effortless Integration**: Set up NGROK with just one line of configuration.
 
-## Quick Setup
+## Setup
 
 Install the module to your Nuxt application with one command:
 
 ```bash
-npx nuxi module add nuxt-ngrok
+npx nuxi module add ngrok
 ```
 
-That's it! You can now use Nuxt NGROK in your Nuxt app ✨
+That's it! You can now use `Nuxt NGROK` in your Nuxt app ✨
 
 
 ## Contribution
