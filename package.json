@@ -1,6 +1,6 @@
 {
   "name": "nuxt-ngrok",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Easily expose your Nuxt application to the internet with NGROK",
   "repository": "arashsheyda/nuxt-ngrok",
   "license": "MIT",
