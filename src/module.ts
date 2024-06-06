@@ -13,7 +13,7 @@ export interface ModuleOptions extends Config {
 
   /**
    * enable ngrok in production mode
-   * @default true
+   * @default false
    */
   production?: boolean
 }
@@ -31,7 +31,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     config.ngrok = defu(config.ngrok || {}, {
       addr: _nuxt.options.devServer.port,
-      production: true,
+      production: false,
       ..._options,
     })
 
