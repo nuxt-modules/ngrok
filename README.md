@@ -26,6 +26,30 @@ npx nuxi module add ngrok
 
 That's it! You can now use `Nuxt NGROK` in your Nuxt app ✨
 
+## Usage
+
+First you'd need to set your authtoken, either in your `nuxt.config.ts` or in your environment variables:
+
+```ts
+export default defineNuxtConfig({
+  modules: [
+    'nuxt-ngrok',
+  ],
+
+  ngrok: {
+    // authtoken_from_env: true, // Use NGROK_AUTHTOKEN environment variable
+    authtoken: 'your_ngrok_authtoken',
+    // you can also set other optional options here, learn more at https://docs.arashsheyda.me/nuxt-ngrok
+    domain: 'mutual-moose-generous.ngrok-free.app',
+  },
+
+})
+```
+
+```bash
+npx nuxi ngrok
+```
+
 
 ## Contribution
 
