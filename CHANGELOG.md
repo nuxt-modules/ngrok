@@ -16,6 +16,7 @@
 
 ### 🏡 Chore
 
+- Disable default authtoken_from_env ([f6e104d](https://github.com/nuxt-modules/ngrok/commit/f6e104d))
 - Update playground config ([439ff3a](https://github.com/arashsheyda/nuxt-ngrok/commit/439ff3a))
 - Update readme ([335ea1d](https://github.com/arashsheyda/nuxt-ngrok/commit/335ea1d))
 - **release:** V0.0.1 ([ffd595f](https://github.com/arashsheyda/nuxt-ngrok/commit/ffd595f))
