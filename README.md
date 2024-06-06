@@ -1,20 +1,20 @@
 ![nuxt-mongoose](https://docs.arashsheyda.me/modules/nuxt-ngrok.jpg)
 
-# Nuxt NGROK
+# Nuxt ngrok
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Easily expose your Nuxt application to the internet with [NGROK](https://ngrok.com/).
+Easily expose your Nuxt application to the internet with [ngrok](https://ngrok.com/).
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 - [📖 &nbsp;Documentation](https://docs.arashsheyda.me/nuxt-ngrok)
 
 ## Features
 
-- **Effortless Integration**: Set up NGROK with just one line of configuration.
+- **Effortless Integration**: Set up ngrok with just one line of configuration.
 
 ## Setup
 
@@ -24,7 +24,7 @@ Install the module to your Nuxt application with one command:
 npx nuxi module add ngrok
 ```
 
-That's it! You can now use `Nuxt NGROK` in your Nuxt app ✨
+That's it! You can now use `ngrok` in your Nuxt app ✨
 
 ## Usage
 
@@ -46,7 +46,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Now if you run your Nuxt application, you should see a message in your console that shows the NGROK URL.
+Now if you run your Nuxt application, you should see a message in your console that shows the ngrok URL.
 
 ```bash
 ✔ Ngrok connected at https://mutual-moose-generous.ngrok-free.app
