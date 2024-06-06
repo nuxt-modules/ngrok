@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v3.0.1
+
+[compare changes](https://github.com/nuxt-modules/ngrok/compare/v3.0.0...v3.0.1)
+
+### 🏡 Chore
+
+- Disable default authtoken_from_env ([f6e104d](https://github.com/nuxt-modules/ngrok/commit/f6e104d))
+- **release:** V3.0.0 ([86354a9](https://github.com/nuxt-modules/ngrok/commit/86354a9))
+
+### ❤️ Contributors
+
+- Arash <arashi.sheyda@gmail.com>
+
 ## v3.0.0
 
 
