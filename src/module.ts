@@ -2,9 +2,7 @@ import { addServerPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { Config } from '@ngrok/ngrok'
 import { defu } from 'defu'
 
-// import { connect } from '@ngrok/ngrok'
-// import { colors } from 'consola/utils'
-// import { consola } from 'consola'
+import { createNgrokConnection } from './utils'
 
 export interface ModuleOptions extends Config {
   /**
@@ -37,18 +35,10 @@ export default defineNuxtModule<ModuleOptions>({
       ..._options,
     })
 
-    // TODO: the problem with hooks is that the log is not displayed in production mode (tied all the hooks but didn't work)
-    // _nuxt.hook('listen', async () => {
-    //   connect({
-    //     ...config.ngrok,
-    //   }).then((listener) => {
-    //     consola.success(colors.green('Ngrok connected at'), colors.blue(listener.url() ?? 'undefined'))
-    //   }).catch((error) => {
-    //     consola.error(colors.red('Ngrok connection error:'), error)
-    //   })
-    // })
-
-    if (import.meta.dev || config.ngrok.production) {
+    if (_nuxt.options.dev) {
+      _nuxt.hook('listen', async () => createNgrokConnection(config.ngrok))
+    }
+    else if (config.ngrok.production) {
       addServerPlugin(resolve('./runtime/server/plugins/ngrok'))
     }
   },
