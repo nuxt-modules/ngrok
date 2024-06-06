@@ -37,7 +37,8 @@ export default defineNuxtModule<ModuleOptions>({
       ..._options,
     })
 
-    // _nuxt.hook('nitro:build:public-assets', async () => {
+    // TODO: the problem with hooks is that the log is not displayed in production mode (tied all the hooks but didn't work)
+    // _nuxt.hook('listen', async () => {
     //   connect({
     //     ...config.ngrok,
     //   }).then((listener) => {
@@ -47,6 +48,8 @@ export default defineNuxtModule<ModuleOptions>({
     //   })
     // })
 
-    addServerPlugin(resolve('./runtime/server/plugins/ngrok'))
+    if (import.meta.dev || config.ngrok.production) {
+      addServerPlugin(resolve('./runtime/server/plugins/ngrok'))
+    }
   },
 })
