@@ -46,8 +46,10 @@ export default defineNuxtConfig({
 })
 ```
 
+Now if you run your Nuxt application, you should see a message in your console that shows the NGROK URL.
+
 ```bash
-npx nuxi ngrok
+✔ Ngrok connected at https://mutual-moose-generous.ngrok-free.app
 ```
 
 
