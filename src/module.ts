@@ -30,7 +30,7 @@ export default defineNuxtModule<ModuleOptions>({
     const config = _nuxt.options.runtimeConfig
 
     config.ngrok = defu(config.ngrok || {}, {
-      authtoken_from_env: import.meta.env.NGROK_AUTHTOKEN ? true : false,
+      // authtoken_from_env: import.meta.env?.NGROK_AUTHTOKEN ? true : false,
       addr: _nuxt.options.devServer.port,
       production: false,
       ..._options,
