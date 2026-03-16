@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v4.0.0
+
+[compare changes](https://github.com/nuxt-modules/ngrok/compare/v3.0.1...v4.0.0)
+
+### 🩹 Fixes
+
+- Update ngrok plugin to correctly handle allowed hosts ([#38](https://github.com/nuxt-modules/ngrok/pull/38))
+- Export createNgrokConnection ([b6db219](https://github.com/nuxt-modules/ngrok/commit/b6db219))
+- ⚠️  Update dependencies to latest and remove cjs support ([#39](https://github.com/nuxt-modules/ngrok/pull/39))
+
+### 💅 Refactors
+
+- Move utils to module.ts ([1f5a3f7](https://github.com/nuxt-modules/ngrok/commit/1f5a3f7))
+
+### 🏡 Chore
+
+- Lint ([a447daf](https://github.com/nuxt-modules/ngrok/commit/a447daf))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Update dependencies to latest and remove cjs support ([#39](https://github.com/nuxt-modules/ngrok/pull/39))
+
+### ❤️ Contributors
+
+- Arash Ari Sheyda ([@arashsheyda](https://github.com/arashsheyda))
+- Arash <arashi.sheyda@gmail.com>
+
 ## v3.0.1
 
 [compare changes](https://github.com/nuxt-modules/ngrok/compare/v3.0.0...v3.0.1)
