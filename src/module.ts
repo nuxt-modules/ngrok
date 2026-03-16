@@ -54,7 +54,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
 })
 
-async function createNgrokConnection(options: ModuleOptions) {
+export async function createNgrokConnection(options: ModuleOptions) {
   try {
     const listener = await connect(options)
     consola.success(colors.green('Ngrok connected at'), colors.blue(listener.url() ?? 'undefined'))
