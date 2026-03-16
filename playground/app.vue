@@ -1,7 +1,6 @@
 <template>
   <div>
-    Nuxt module playground! hey
-    sdg
+    ngrok Nuxt module playground!
   </div>
 </template>
 

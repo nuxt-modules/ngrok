@@ -4,9 +4,9 @@
 import type { NitroApp } from 'nitropack'
 
 import { createNgrokConnection } from '../../../module'
+import type { ModuleOptions } from '../../../module'
 
 import { useRuntimeConfig } from '#imports'
-import type { ModuleOptions } from '~/src/module'
 
 type NitroAppPlugin = (nitro: NitroApp) => void
 
