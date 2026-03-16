@@ -1,7 +1,6 @@
 import { addServerPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { Config } from '@ngrok/ngrok'
 import { defu } from 'defu'
-
 import { connect } from '@ngrok/ngrok'
 import { colors } from 'consola/utils'
 import { consola } from 'consola'
@@ -26,33 +25,41 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'ngrok',
   },
   defaults: {},
-  setup(_options, _nuxt) {
+  setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    const config = _nuxt.options.runtimeConfig
+    const ngrokConfig = defu(nuxt.options.runtimeConfig.ngrok as ModuleOptions || {}, options,
+      {
+        addr: nuxt.options.devServer.port,
+        production: false,
+      },
+    )
 
-    config.ngrok = defu(config.ngrok || {}, {
-      // authtoken_from_env: import.meta.env?.NGROK_AUTHTOKEN ? true : false,
-      addr: _nuxt.options.devServer.port,
-      production: false,
-      ..._options,
-    })
+    nuxt.options.runtimeConfig.ngrok = ngrokConfig
 
-    if (_nuxt.options.dev) {
-      _nuxt.hook('listen', async () => createNgrokConnection(config.ngrok))
+    if (nuxt.options.dev) {
+      const allowedHost = ngrokConfig.domain || ngrokConfig.hostname || '.ngrok-free.app'
+
+      nuxt.options.vite = defu(nuxt.options.vite, {
+        server: {
+          allowedHosts: [allowedHost],
+        },
+      })
+
+      nuxt.hook('listen', () => createNgrokConnection(ngrokConfig))
     }
-    else if (config.ngrok.production) {
+    else if (ngrokConfig.production) {
       addServerPlugin(resolve('./runtime/server/plugins/ngrok'))
     }
   },
 })
 
-export function createNgrokConnection(options: ModuleOptions) {
-  connect({
-    ...options,
-  }).then((listener) => {
+async function createNgrokConnection(options: ModuleOptions) {
+  try {
+    const listener = await connect(options)
     consola.success(colors.green('Ngrok connected at'), colors.blue(listener.url() ?? 'undefined'))
-  }).catch((error) => {
+  }
+  catch (error) {
     consola.error(colors.red('Ngrok connection error:'), error)
-  })
+  }
 }
