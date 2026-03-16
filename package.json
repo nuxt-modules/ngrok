@@ -22,7 +22,8 @@
     "dev:preview": "nuxi preview playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run build && changelogen --release && npm publish && git push --follow-tags",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   modules: ['../src/module'],
+  devtools: { enabled: true },
 
   ngrok: {
     authtoken_from_env: true, // use NGROK_AUTHTOKEN from environment variables
